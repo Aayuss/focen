@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focen Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="main-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span></div>
+        <div><p class="eyebrow">FOCUS PROTOCOL</p><h1>Focen</h1></div>
+      </div>
+      <button id="add-group-btn" class="btn secondary-btn">New group <span>+</span></button>
+    </header>
+
+    <main class="main-content" id="groups-container">
+    </main>
+  </div>
+
+  <div id="disable-modal" class="modal hidden">
+    <div class="modal-content">
+      <p class="eyebrow danger-text">PAUSE PROTECTION</p>
+      <h3>Disable this focus group?</h3>
+      <p>Type the confirmation below exactly to make a deliberate change.</p>
+      <div class="quote-box">
+        I am intentionally pausing this focus group.
+      </div>
+      <textarea id="humiliating-input" rows="4" placeholder="Type here..."></textarea>
+      
+      <div class="disable-options">
+        <label>
+          <input type="radio" name="disable_type" value="forever" checked> Disable Forever
+        </label>
+        <label>
+          <input type="radio" name="disable_type" value="today"> Disable for Today Only (Auto-resumes tomorrow)
+        </label>
+      </div>
+
+      <div class="modal-actions">
+        <button id="modal-cancel-btn" class="btn text-btn">Keep protection on</button>
+        <button id="modal-confirm-btn" class="btn danger-btn" disabled>Pause group</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
